@@ -1,0 +1,47 @@
+#planos {
+    padding: 6.66vw 3.33vw;
+    padding-top: 8vw;
+}
+#planos .plans-list {
+    width: 80%;
+}
+#planos .plans-list a {
+    border-radius: 25px;
+    border: 1px solid var(--azul);
+    aspect-ratio: 1/1.2;
+    padding: 3.33vw;
+    transform: scale(.9);
+}
+#planos .plan-item.main a {
+    background-color: var(--azul);
+    color: var(--branco-principal);
+    filter: drop-shadow(0 0 5px var(--azul));
+    animation: pop-up 2s ease-in-out infinite;
+}
+#planos .plan-item.main .btn-outline-white:hover {
+    color: var(--azul);
+}
+#planos .plan-item.main a .blue {
+    color: var(--branco-principal);
+}
+#planos h2.blue {
+    color: var(--segundo-azul);
+}
+#planos .plan-item a svg {
+    fill: var(--segundo-azul);
+}
+#planos .plan-item.main a svg {
+    fill: var(--branco-principal);
+}
+
+@keyframes pop-up {
+    0% {
+        transform: scale(.95);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(.95);
+    }
+}
