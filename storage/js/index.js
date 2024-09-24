@@ -41,7 +41,7 @@ const slideMove = function() {
 
 const catalogoSlider = function() {
     const slider = document.querySelector('#catalogo .list-slide-movies');
-    const slides = document.querySelectorAll('.slider');
+    const slides = slider.querySelectorAll('.slider');
     const prevSlide = document.getElementById('prev-slide');
     const nextSlide = document.getElementById('next-slide');
     let slideCurrent = 0;

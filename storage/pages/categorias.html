@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/categorias.css">
+    <link rel="icon" href="../img/logo.ico">
+    <title>BlueWaves Stream</title>
+</head>
+<body>
+    <header class="w-100 d-flex align-items-center justify-between p-fixed top-0">
+        <a href="#" class="logo d-flex align-items-center btn-opacity scale-down gap-16">
+            <img src="../img/logo.ico">
+            <p class="fs-forza white fs-21">BlueWaves Stream</p>
+        </a>
+        
+        <nav class="d-flex align-items-center gap-16">
+            <div class="searchbar-container p-relative">
+                <input id="searchbar" type="search" class="p-relative">
+                    <label for="searchbar" class="d-flex align-items-center gap-16 p-absolute inset-0 m-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                        <p class="white fs-montserrat fs-14">O que você quer assistir hoje?</p>
+                    </label>
+                </input>
+            </div>
+            <a href="#" class="scale-down"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg></a>
+            <a href="#" class="scale-down"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg></a>
+        </nav>
+    </header>
+    <main>
+        <section id="catalogo" class="d-flex flex-column p-relative m-auto">
+            <div class="movies-slider d-flex align-items-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+                <button id="prev-slide" class="btn btn-opacity btn-rotate-down">
+                    <svg style="transform: rotate(180deg);" width="14" height="26" viewBox="0 0 14 26" fill="none"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+                <div id="slider-container">
+                    <h2 class="fs-montserrat white fs-32 text-left pd-p" data-aos="fade-down" data-aos-duration="1000">Nossos mais assistidos!</h2>
+                    <ul class="list-slide-movies d-flex align-items-center gap-64 m-auto">
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/1.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/2.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/3.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/4.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/5.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/6.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/7.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/8.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/9.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/10.webp"></a>
+                        </li>
+                    </ul>
+                </div>
+                <button id="next-slide" class="btn btn-opacity btn-rotate-down">
+                    <svg width="14" height="26" viewBox="0 0 14 26" fill="none"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+            </div>
+            <div class="movies-slider d-flex align-items-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+                <button id="prev-slide-2" class="btn btn-opacity btn-rotate-down">
+                    <svg style="transform: rotate(180deg);" width="14" height="26" viewBox="0 0 14 26" fill="none"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+                <div id="slider-container">
+                    <h2 class="fs-montserrat white fs-32 text-left pd-p" data-aos="fade-down" data-aos-duration="1000">Nossos mais assistidos!</h2>
+                    <ul class="list-slide-movies-2 d-flex align-items-center gap-64 m-auto">
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/1.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/2.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/3.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/4.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/5.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/6.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/7.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/8.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/9.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/10.webp"></a>
+                        </li>
+                    </ul>
+                </div>
+                <button id="next-slide-2" class="btn btn-opacity btn-rotate-down">
+                    <svg width="14" height="26" viewBox="0 0 14 26" fill="none"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+            </div>
+        </section>
+        <section id="estreias" class="pd-section">
+            <h2 class="fs-montserrat blue fs-32 text-center pd-p" data-aos="fade-down" data-aos-duration="1000">Estreias que vão dar no que falar!</h2>
+            <ul class="series-list" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
+                <li>
+                    <a href="#" class="btn-opacity scale-up">
+                        <img src="../img/estreias/1.avif">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn-opacity scale-up">
+                        <img src="../img/estreias/2.avif">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn-opacity scale-up">
+                        <img src="../img/estreias/3.avif">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn-opacity scale-up">
+                        <img src="../img/estreias/4.avif">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn-opacity scale-up">
+                        <img src="../img/estreias/5.avif">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn-opacity scale-up">
+                        <img src="../img/estreias/6.avif">
+                    </a>
+                </li>
+            </ul>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                <a href="#" class="btn btn-blue-animated fs-montserrat d-flex m-auto justify-center">Assine agora!</a>
+            </div>
+        </section>
+        <section id="catalogo-2" class="d-flex flex-column p-relative m-auto">
+            <div class="movies-slider d-flex align-items-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+                <button id="prev-slide-3" class="btn btn-opacity btn-rotate-down">
+                    <svg style="transform: rotate(180deg);" width="14" height="26" viewBox="0 0 14 26" fill="none"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+                <div id="slider-container">
+                    <h2 class="fs-montserrat white fs-32 text-left pd-p" data-aos="fade-down" data-aos-duration="1000">Nossos mais assistidos!</h2>
+                    <ul class="list-slide-movies d-flex align-items-center gap-64 m-auto">
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/1.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/2.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/3.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/4.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/5.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/6.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/7.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/8.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/9.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/10.webp"></a>
+                        </li>
+                    </ul>
+                </div>
+                <button id="next-slide-3" class="btn btn-opacity btn-rotate-down">
+                    <svg width="14" height="26" viewBox="0 0 14 26" fill="none"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+            </div>
+            <div class="movies-slider d-flex align-items-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+                <button id="prev-slide-4" class="btn btn-opacity btn-rotate-down">
+                    <svg style="transform: rotate(180deg);" width="14" height="26" viewBox="0 0 14 26" fill="none"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+                <div id="slider-container">
+                    <h2 class="fs-montserrat white fs-32 text-left pd-p" data-aos="fade-down" data-aos-duration="1000">Nossos mais assistidos!</h2>
+                    <ul class="list-slide-movies-2 d-flex align-items-center gap-64 m-auto">
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/1.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/2.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/3.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/4.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/5.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/6.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/7.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/8.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/9.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/10.webp"></a>
+                        </li>
+                    </ul>
+                </div>
+                <button id="next-slide-4" class="btn btn-opacity btn-rotate-down">
+                    <svg width="14" height="26" viewBox="0 0 14 26" fill="none"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+            </div>
+            <div class="movies-slider d-flex align-items-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+                <button id="prev-slide-5" class="btn btn-opacity btn-rotate-down">
+                    <svg style="transform: rotate(180deg);" width="14" height="26" viewBox="0 0 14 26" fill="none"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+                <div id="slider-container">
+                    <h2 class="fs-montserrat white fs-32 text-left pd-p" data-aos="fade-down" data-aos-duration="1000">Nossos mais assistidos!</h2>
+                    <ul class="list-slide-movies-3 d-flex align-items-center gap-64 m-auto">
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/1.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/2.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/3.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/4.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/5.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/6.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/7.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/8.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/9.webp"></a>
+                        </li>
+                        <li class="slider">
+                            <a href="#" class="d-flex p-relative scale-up"><img src="../img/movies/10.webp"></a>
+                        </li>
+                    </ul>
+                </div>
+                <button id="next-slide-5" class="btn btn-opacity btn-rotate-down">
+                    <svg width="14" height="26" viewBox="0 0 14 26" fill="none"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+            </div>
+        </section>
+        <section id="faq" class="w-100 pd-section d-flex flex-column align-items-center justify-center">
+            <h2 class="fs-montserrat blue fs-32 text-center pd-p" data-aos="fade-down" data-aos-duration="1000">Perguntas frequentes</h2>
+            <div class="faq-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                <div class="faq-item">
+                    <div class="faq-question d-flex align-items-center justify-between">
+                        <span class="white fs-montserrat fs-21">O que é o BlueWaves Stream?</span>
+                        <svg class="sc-bYMpWt jRCA-DL expanded" width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="rgba(255, 255, 255, 0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </div>
+                    <div class="faq-answer white fs-montserrat fs-16">
+                        O BlueWaves Stream é um serviço de streaming que oferece uma ampla variedade de filmes, séries, documentários e animações. Nossa plataforma foi criada para proporcionar uma experiência de entretenimento de alta qualidade e acessível em qualquer dispositivo.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question d-flex align-items-center justify-between">
+                        <span class="white fs-montserrat fs-21">Em quais dispositivos posso assistir ao BlueWaves Stream?</span>
+                        <svg class="sc-bYMpWt jRCA-DL expanded" width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="rgba(255, 255, 255, 0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </div>
+                    <div class="faq-answer white fs-montserrat fs-16">
+                        Você pode acessar o BlueWaves Stream em diversos dispositivos, como smartphones, tablets, computadores, smart TVs e consoles de videogame. Basta ter uma conexão com a internet e um dispositivo compatível.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question d-flex align-items-center justify-between">
+                        <span class="white fs-montserrat fs-21">Posso assistir ao conteúdo offline?</span>
+                        <svg class="sc-bYMpWt jRCA-DL expanded" width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="rgba(255, 255, 255, 0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </div>
+                    <div class="faq-answer white fs-montserrat fs-16">
+                        Sim! No BlueWaves Stream, você pode baixar seus filmes e séries favoritos para assisti-los offline. Essa opção está disponível em dispositivos móveis para que você aproveite seu conteúdo mesmo sem conexão com a internet.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question d-flex align-items-center justify-between">
+                        <span class="white fs-montserrat fs-21">Há um período de teste gratuito?</span>
+                        <svg class="sc-bYMpWt jRCA-DL expanded" width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="rgba(255, 255, 255, 0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </div>
+                    <div class="faq-answer white fs-montserrat fs-16">
+                        Sim, oferecemos um período de teste gratuito de 7 dias para novos usuários. Durante esse período, você poderá explorar todo o catálogo do BlueWaves Stream sem qualquer cobrança. Após o período de teste, você pode optar por um dos nossos planos de assinatura.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question d-flex align-items-center justify-between">
+                        <span class="white fs-montserrat fs-21">Quais são os planos de assinatura disponíveis?</span>
+                        <svg class="sc-bYMpWt jRCA-DL expanded" width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="rgba(255, 255, 255, 0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </div>
+                    <div class="faq-answer white fs-montserrat fs-16">
+                        O BlueWaves Stream oferece diferentes planos de assinatura, incluindo opções mensais e anuais. Temos planos individuais e familiares, todos com acesso completo ao catálogo, sem anúncios e com a possibilidade de criar perfis personalizados.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question d-flex align-items-center justify-between">
+                        <span class="white fs-montserrat fs-21">Como posso cancelar minha assinatura?</span>
+                        <svg class="sc-bYMpWt jRCA-DL expanded" width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="rgba(255, 255, 255, 0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </div>
+                    <div class="faq-answer white fs-montserrat fs-16">
+                        Você pode cancelar sua assinatura a qualquer momento diretamente pela área de "Configurações" no site ou aplicativo do BlueWaves Stream. O cancelamento entra em vigor no final do ciclo de cobrança atual.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question d-flex align-items-center justify-between">
+                        <span class="white fs-montserrat fs-21">Posso compartilhar minha conta com outras pessoas?</span>
+                        <svg class="sc-bYMpWt jRCA-DL expanded" width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 24.5L12.5 13L1.5 1.5" stroke="rgba(255, 255, 255, 0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </div>
+                    <div class="faq-answer white fs-montserrat fs-16">
+                        Sim! Dependendo do plano que você escolher, o BlueWaves Stream permite criar múltiplos perfis, para que você possa compartilhar sua conta com familiares ou amigos, mantendo recomendações e histórico de visualizações separados.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer" class="w-100 pd-section d-flex align-items-center justify-center flex-column gap-64">
+            <div data-aos="fade-down" data-aos-duration="1000">
+                <a href="/index.html" class="d-flex flex-column align-items-center justify-center gap-16 scale-down btn-opacity">
+                    <img src="../img/logo.ico">
+                    <p class="fs-forza white fs-21">BlueWaves Stream</p>
+                </a>
+            </div>
+            <ul class="d-flex align-items-center justify-center text-center gap-64">
+                <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
+                    <a href="#" class="white fs-16 fs-montserrat text-center scale-down btn-opacity">Idioma</a>
+                </li>
+                <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800">
+                    <a href="#" class="white fs-16 fs-montserrat text-center scale-down btn-opacity">Dispositivos compatíveis</a>
+                </li>
+                <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
+                    <a href="#" class="white fs-16 fs-montserrat text-center scale-down btn-opacity">Contrato de assinatura</a>
+                </li>
+                <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1200">
+                    <a href="#" class="white fs-16 fs-montserrat text-center scale-down btn-opacity">Politica de privacidade</a>
+                </li>
+                <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1400">
+                    <a href="#" class="white fs-16 fs-montserrat text-center scale-down btn-opacity">Proteção de dados no Brasil</a>
+                </li>
+                <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1600">
+                    <a href="#" class="white fs-16 fs-montserrat text-center scale-down btn-opacity">Anuncios personalizados</a>
+                </li>
+                <li data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1800">
+                    <a href="#" class="white fs-16 fs-montserrat text-center scale-down btn-opacity">Ajuda</a>
+                </li>
+            </ul>
+            <div class="copyright d-flex align-items-center justify-center flex-column gap-16">
+                <p class="white fs-14 fs-montserrat text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2000">® 2024 BlueWaves Stream. Todos os direitos reservados. Serviço de assinatura paga. Conteúdo sujeito à disponibilidade.</p>
+                <p class="white fs-14 fs-montserrat text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2200">BlueWaves Stream é um serviço pago, baseado em assinatura e sujeito a termos e condições. O serviço BlueWaves Stream é comercializado por BWS Entertainment Ltda., Rua Oceano Azul, 987 - Copacabana, Rio de Janeiro - RJ, 12345-678, Brasil e CNPJ 12.345.678/0001-90.</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../js/index.js"></script>
+    <script src="../js/categorias.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        })
+      </script>
+</body>
+</html>
